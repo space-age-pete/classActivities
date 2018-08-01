@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var likesSteak = confirm("if you like steak, hit \"ok\"");
+        
+        // if(likesSteak) {
+        //     document.write("Here's a Steak Sandwich!");
+        // } else {
+        //     document.write("Here's a Tofu Stir-Fry!");
+        // }
+
+        // var year = prompt("enter your birth year (YYYY)");
+        
+        // if(year > 1997){
+        //     alert("No Sake for you!");
+        // }
+
+    if(likesSteak) {
+        var message = "Here's a Steak Sandwich!";
+    } else {
+        var message = "Here's a Tofu Stir-Fry!";
+    }
+
+    var year = prompt("enter your birth year (YYYY)");
+    
+    if(year > 1997){
+        message += " No Sake for you!";
+    }
+    
+    document.write(message);
+    
+    
+    </script>
+</body>
+</html>

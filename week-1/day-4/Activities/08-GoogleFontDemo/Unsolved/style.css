@@ -1,0 +1,22 @@
+/**
+ * Google Fonts Demo
+ **/
+
+/* Add in the Google Fonts of your choice */
+.thought1 {
+    font-family: 'Gaegu', cursive;
+}
+
+.thought2 {
+    font-family: 'Fondamento', cursive;
+}
+
+.thought3 {
+    font-family: 'Walter Turncoat', cursive;
+}
+
+p:hover {
+    color:blue;
+    text-decoration: underline;
+    cursor: none;
+}
