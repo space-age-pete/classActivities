@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JavaScript Content!</title>
 </head>
+
 <body>
 
   <h1>Drink Selection!</h1>
   <hr>
 
   <div id="drink-options"></div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 
   <script type="text/javascript">
 
@@ -28,8 +33,20 @@
     // Using JavaScript programmatically append each drinkList item to the "drink-options" div
     // HINT: you will need a for loop to go over each element in the list
 
+    var targetDiv = $("#drink-options");
+
+    var newList = $("<ul>");
+
+    drinkList.forEach(function (drink) {
+      var newListItem = $("<li>");
+      newListItem.text(drink)
+      newList.append(newListItem);
+    });
+
+    targetDiv.append(newList);
 
   </script>
 
 </body>
+
 </html>
