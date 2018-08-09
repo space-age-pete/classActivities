@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="functions.js"></script>
+</head>
+
+<body>
+    <script>
+        function reverser(string) {
+            var newstring = "";
+            for (var i = string.length - 1; i > -1; i--) {
+                newstring += string.charAt(i);
+            }
+            return newstring + " is " + string + " spelled backwards!";
+        }
+
+        console.log(reverser("goblin"));
+
+        // create a function
+        // that takes one input (string)
+        // outputs the reverse of the input
+        function reverse(word) {
+            // split word is an array
+            var splitWord = word.split("");
+            // reversedWord is a reversed array :)
+            var reversedWord = splitWord.reverse();
+            var output = reversedWord.join("");
+
+            // return output;
+            return word.split("").reverse().join("");
+        }
+    </script>
+</body>
+
+</html>

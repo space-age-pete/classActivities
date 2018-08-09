@@ -2,38 +2,48 @@
 
 <html lang="en-us">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Document</title>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div id="show-number"></div>
+  <div id="show-number"></div>
 
-    <br>
+  <br>
 
-    <button id="stop">Stop</button>
-    <button id="resume">Resume</button>
+  <button id="stop">Stop</button>
+  <button id="resume">Resume</button>
 
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Script -->
-    <script type="text/javascript">
+  <!-- Script -->
+  <script type="text/javascript">
 
     var number = 100;
 
     var intervalId;
 
+    var isRunning = false;
+
     $("#stop").on("click", stop);
 
-    $("#resume").on("click", run);
+    $("#resume").on("click", function () {
+      if (!isRunning) {
+        intervalId = setInterval(decrement, 1000);
+      }
+      isRunning = true;
+    });
 
     function run() {
-      intervalId = setInterval(decrement, 1000);
+      if (!isRunning) {
+        intervalId = setInterval(decrement, 1000);
+      }
+      isRunning = true;
     }
 
     function decrement() {
@@ -53,12 +63,13 @@
     function stop() {
 
       clearInterval(intervalId);
+      isRunning = false;
     }
 
     run();
 
-    </script>
+  </script>
 
-  </body>
+</body>
 
 </html>
