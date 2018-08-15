@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Time Sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="timesheet.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="jumbotron text-center">
+                    <h1>Employee Data Management</h2>
+                        <h3>A Comprehensive Directory of Billable Hours</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <h3>Add Employee</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="nameInput">Employee Name</label>
+                        <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="roleInput">Role</label>
+                        <input type="text" class="form-control" id="roleInput" aria-describedby="emailHelp" placeholder="CEO">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateInput">Start Date (MM/DD/YYYY)</label>
+                        <input type="date" class="form-control" id="dateInput" placeholder="01/01/1970">
+                    </div>
+                    <div class="form-group">
+                        <label for="rateInput">Monthly Rate</label>
+                        <input type="number" class="form-control" id="rateInput" placeholder="20000">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+
+            <div class="col-sm-10">
+                <h3>Current Employees</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">Months Worked</th>
+                            <th scope="col">Monthly Rate ($)</th>
+                            <th scope="col">Total Billed ($)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyA3pgJ3kzVrmNtKPKrQ-rUbkRdoeSu4_Ts",
+                authDomain: "my-mediocre-project-24ffb.firebaseapp.com",
+                databaseURL: "https://my-mediocre-project-24ffb.firebaseio.com",
+                projectId: "my-mediocre-project-24ffb",
+                storageBucket: "my-mediocre-project-24ffb.appspot.com",
+                messagingSenderId: "28997417818"
+            };
+            firebase.initializeApp(config);
+        </script>
+
+        <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+            crossorigin='anonymous'></script>
+        <script src="timesheet.js"></script>
+</body>
+
+</html>

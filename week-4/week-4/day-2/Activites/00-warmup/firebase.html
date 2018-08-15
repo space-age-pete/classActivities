@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Name:
+    <input id="name-input" type="text" value=""> Age:
+    <input id="age-input" type="number" value="">
+    <input id="confirm" type="button" value="Add">
+
+    <div id="bio">
+        <h1 id="name"></h1>
+        <h1 id="age"></h1>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA3pgJ3kzVrmNtKPKrQ-rUbkRdoeSu4_Ts",
+            authDomain: "my-mediocre-project-24ffb.firebaseapp.com",
+            databaseURL: "https://my-mediocre-project-24ffb.firebaseio.com",
+            projectId: "my-mediocre-project-24ffb",
+            storageBucket: "my-mediocre-project-24ffb.appspot.com",
+            messagingSenderId: "28997417818"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="firebase.js"></script>
+</body>
+
+</html>
