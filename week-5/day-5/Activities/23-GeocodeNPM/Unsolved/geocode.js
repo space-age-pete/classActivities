@@ -11,7 +11,13 @@
 
 // Include the geocoder NPM package (Remember to run "npm install geocoder"!)
 
+var geocoder = require('geocoder');
 
+// Geocoding
+geocoder.geocode("St. Charles, IL ", function (err, data) {
+    // do something with data
+    console.log(data);
+});
 
 
 // Take in the command line arguments
